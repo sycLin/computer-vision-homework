@@ -6,8 +6,12 @@ Computer Vision Homework
 Homework Decription
 
 hw1: Basic Image Manipulation
+---
 hw2: Basic Image Manipulation
+---
 hw3: Histogram Equalization
+---
 hw4: Binary Morphology
+---
 
 
