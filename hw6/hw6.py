@@ -76,7 +76,10 @@ def binarize(src, threshold=128):
 	return newImage
 
 """
-TODO: here, commentation
+	This function does the downsampling.
+	@param src should be an image
+	@param block a 2-tuple representing a block, and we'll take upmost-left point of this block
+	@return the new image downsampled
 """
 def downSample(src, block=(8, 8)):
 	# calculate the size of the down-sampled image
