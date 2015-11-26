@@ -32,4 +32,17 @@ Homework Decription
 - closing with octo-3-5-5-5-3-kernel
 - hit-and-miss with L-shape-kernels
 
+### hw5: GrayScale Morphology
+(written in Python)
+- dilation
+- erosion
+- opening
+- closing
+(with 3-5-5-5-3-kernel of 0-value, i.e., local minima & maxima)
 
+### hw6: Yokoi Connectivity Number
+- downsampling from 512x512 to 64x64
+ - take the upmost-left of each 8x8 block
+- result will be a 64 by 64 matrix
+
+### hw7: Thinning Operator
