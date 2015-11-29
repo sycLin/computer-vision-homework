@@ -354,20 +354,20 @@ if __name__ == "__main__":
 			return 'g' if s == 1 else x
 
 		how_many_changed = 0
-		for i in range(thinned.size[0]):
-			for j in range(thinned.size[1]):
+		for i in range(thinned.size[1]):
+			for j in range(thinned.size[0]):
 				if connectedType == 4:
 					h = h4
 				elif connectedType == 8:
 					h = h8
-				n = get8Neighbors(thinnedPixels, i, j)
+				n = get8Neighbors(thinnedPixels, j, i)
 				a1 = h(n[0], n[1], n[6], n[2])
 				a2 = h(n[0], n[2], n[7], n[3])
 				a3 = h(n[0], n[3], n[8], n[4])
 				a4 = h(n[0], n[4], n[5], n[1])
-				tmp = f(a1, a2, a3, a4, thinnedPixels[i, j])
-				if tmp == 'g' and pairImagePixels[i, j] == 255:
-					thinnedPixels[i, j] = 0
+				tmp = f(a1, a2, a3, a4, thinnedPixels[j, i])
+				if tmp == 'g' and pairImagePixels[j, i] == 255:
+					thinnedPixels[j, i] = 0
 					how_many_changed += 1
 					nothingChanged = False
 		print "There are", how_many_changed, "pixels changed in this round."
