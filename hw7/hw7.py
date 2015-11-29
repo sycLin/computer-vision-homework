@@ -1,5 +1,5 @@
 
-import os, sys
+import os, sys, math
 from PIL import Image
 
 #####################
@@ -7,7 +7,7 @@ from PIL import Image
 #####################
 
 def print_usage():
-	print >> sys.stderr, "Usage:\n$python hw7.py <img path>"
+	print >> sys.stderr, "Usage:\n$python " + __file__ + " <img path>"
 
 """
 	This function sets pixels to 0 if they're less than $threshold$ in $src$.
@@ -27,6 +27,30 @@ def binarize(src, threshold=128):
 			else:
 				newImagePixels[i, j] = 255
 	return newImage
+
+
+"""
+	This function does the downsampling.
+	@param src should be an image
+	@param block a 2-tuple representing a block, and we'll take upmost-left point of this block
+	@return the new image downsampled
+"""
+def downSample(src, block=(8, 8)):
+	# calculate the size of the down-sampled image
+	newImageSize = [0, 0]
+	newImageSize[0] = int(math.ceil(float(src.size[0]) / block[0]))
+	newImageSize[1] = int(math.ceil(float(src.size[1]) / block[1]))
+	# create the new image
+	newImage = Image.new(src.mode, newImageSize)
+	newImagePixels = newImage.load()
+	# down-sampling
+	srcPixels = src.load()
+	for i in range(newImageSize[0]):
+		for j in range(newImageSize[1]):
+			newImagePixels[i, j] = srcPixels[i*block[0], j*block[1]]
+	return newImage
+
+
 
 """
 	This function returns a list pixels,
@@ -104,7 +128,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	# binarize the image
-	binarized = binarize(orig, 128)
+	binarized = downSample(binarize(orig, 128), (8, 8))
 	binarizedPixels = binarized.load()
 	binarized.save('binarized.bmp')
 
