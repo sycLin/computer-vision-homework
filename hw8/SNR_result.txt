@@ -1,0 +1,28 @@
+Gaussian 10: 13.5973213697
+Gaussian 30: 4.18590573877
+Salt-and-Pepper 0.1: -2.10802710151
+Salt-and-Pepper 0.05: 0.888403235701
+G10 box 3x3: 17.7477046237
+G30 box 3x3: 12.5971123619
+Snp10 box 3x3: 6.32976323195
+Snp5 box 3x3: 9.42027035993
+G10 box 5x5: 14.8739539066
+G30 box 5x5: 13.2617994698
+Snp10 box 5x5: 8.47964501322
+Snp5 box 5x5: 11.1237985451
+G10 median 3x3: 17.6746771769
+G30 median 3x3: 11.0916016474
+Snp10 median 3x3: 15.3319866915
+Snp5 median 3x3: 19.2838748041
+G10 median 5x5: 16.0135217409
+G30 median 5x5: 12.8607428467
+Snp10 median 5x5: 15.7098950933
+Snp5 median 5x5: 16.3666112778
+G10 opening-then-closing: 8.60312968987
+G30 opening-then-closing: 8.62571452533
+Snp10 opening-then-closing: -2.2963072715
+Snp5 opening-then-closing: 4.13552957986
+G10 closing-then-opening: 7.66164001826
+G30 closing-then-opening: 6.07162697144
+Snp10 closing-then-opening: -3.09313393168
+Snp5 closing-then-opening: 3.70413617776

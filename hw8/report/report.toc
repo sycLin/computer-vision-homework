@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Source Code}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Creating Noise}{2}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Gaussian Noise}{2}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Salt-and-Pepper Noise}{2}{subsubsection.1.1.2}
+\contentsline {subsection}{\numberline {1.2}Box Filtering}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Median Filtering}{4}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Opening-then-Closing}{4}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Opening}{4}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Closing}{4}{subsubsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5}Closing-then-Opening}{5}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}SNR Computing}{5}{subsection.1.6}
+\contentsline {section}{\numberline {2}Results}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Gaussain Noise with amplitude=10}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Gaussain Noise with amplitude=30}{8}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Salt-and-Pepper Noise with prob=0.1}{10}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Salt-and-Pepper Noise with prob=0.05}{12}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}SNR Results}{14}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Noisy Images}{14}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}With 3x3 Box Filtering}{14}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}With 5x5 Box Filtering}{15}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}With 3x3 Median Filtering}{15}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}With 5x5 Median Filtering}{15}{subsubsection.2.5.5}
+\contentsline {subsubsection}{\numberline {2.5.6}With Opening-then-Closing}{15}{subsubsection.2.5.6}
+\contentsline {subsubsection}{\numberline {2.5.7}With Closing-then-Opening}{16}{subsubsection.2.5.7}
