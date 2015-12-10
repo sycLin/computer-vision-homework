@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Source Code}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Principle Code Sneak Peek}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Functions Overview}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Common Gradient Magnitude}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{Maximum Magnitude Type}{subsection.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.2}{Parameters \(Threshold\)}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Results}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Robert's Operator}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Prewitt's Edge Detector}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Sobel's Edge Detector}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.4}{Frei and Chen's Gradient Operator}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.5}{Kirsch's Compass Operator}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.6}{Robinson's Compass Operator}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.7}{Nevatia-Babu 5x5 Operator}{section.2}% 14
