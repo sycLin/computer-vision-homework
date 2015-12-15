@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Source Code}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Principle Code Sneak Peek}{2}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Functions Overview}{2}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Masks to be used}{2}{subsubsection.1.1.2}
+\contentsline {paragraph}{DIGITAL\_LAPLACIAN\_MASK\_1}{3}{section*.2}
+\contentsline {paragraph}{DIGITAL\_LAPLACIAN\_MASK\_2}{3}{section*.3}
+\contentsline {paragraph}{DIGITAL\_LAPLACIAN\_MINIMUM\_VARIANCE\_MASK}{4}{section*.4}
+\contentsline {paragraph}{LAPLACIAN\_OF\_GAUSSIAN\_KERNEL}{4}{section*.5}
+\contentsline {paragraph}{DIFFERENCE\_OF\_GAUSSIAN\_MASK}{4}{section*.6}
+\contentsline {paragraph}{BBB mask}{4}{section*.7}
+\contentsline {subsection}{\numberline {1.2}Parameters (Threshold)}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Results}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Laplacian Mask Type 1}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Laplacian Mask Type 2}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Minimum Variance Laplacian}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Laplace of Gaussian}{8}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Difference of Gaussian}{9}{subsection.2.5}
