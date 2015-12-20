@@ -118,6 +118,25 @@ def doLaplacian(src, threshold, type):
 						newImagePixels[i, j] = 255
 				except:
 					newImagePixels[i, j] = 255
+			elif mapp[i][j] == -1:
+				try:
+					neighbors_value = [
+						mapp[i-1][j-1],
+						mapp[i][j-1],
+						mapp[i+1][j-1],
+						mapp[i-1][j],
+						mapp[i][j],
+						mapp[i+1][j],
+						mapp[i-1][j+1],
+						mapp[i][j+1],
+						mapp[i+1][j+1],
+					]
+					if 1 in neighbors_value:
+						newImagePixels[i, j] = 0
+					else:
+						newImagePixels[i, j] = 255
+				except:
+					newImagePixels[i, j] = 255
 			else:
 				newImagePixels[i, j] = 255 # set to white
 	return newImage
@@ -170,6 +189,25 @@ def doMinimumVarianceLaplacian(src, threshold):
 						mapp[i+1][j+1],
 					]
 					if -1 in neighbors_value:
+						newImagePixels[i, j] = 0
+					else:
+						newImagePixels[i, j] = 255
+				except:
+					newImagePixels[i, j] = 255
+			elif mapp[i][j] == -1:
+				try:
+					neighbors_value = [
+						mapp[i-1][j-1],
+						mapp[i][j-1],
+						mapp[i+1][j-1],
+						mapp[i-1][j],
+						mapp[i][j],
+						mapp[i+1][j],
+						mapp[i-1][j+1],
+						mapp[i][j+1],
+						mapp[i+1][j+1],
+					]
+					if 1 in neighbors_value:
 						newImagePixels[i, j] = 0
 					else:
 						newImagePixels[i, j] = 255
@@ -327,129 +365,36 @@ def doLaplacianOfGaussian(src, threshold):
 			if mapp[i][j] == 1:
 				try:
 					neighbors_value = [
-						mapp[i-5][j-5],
-						mapp[i-4][j-5],
-						mapp[i-3][j-5],
-						mapp[i-2][j-5],
-						mapp[i-1][j-5],
-						mapp[i][j-5],
-						mapp[i+1][j-5],
-						mapp[i+2][j-5],
-						mapp[i+3][j-5],
-						mapp[i+4][j-5],
-						mapp[i+5][j-5],
-						mapp[i-5][j-4],
-						mapp[i-4][j-4],
-						mapp[i-3][j-4],
-						mapp[i-2][j-4],
-						mapp[i-1][j-4],
-						mapp[i][j-4],
-						mapp[i+1][j-4],
-						mapp[i+2][j-4],
-						mapp[i+3][j-4],
-						mapp[i+4][j-4],
-						mapp[i+5][j-4],
-						mapp[i-5][j-3],
-						mapp[i-4][j-3],
-						mapp[i-3][j-3],
-						mapp[i-2][j-3],
-						mapp[i-1][j-3],
-						mapp[i][j-3],
-						mapp[i+1][j-3],
-						mapp[i+2][j-3],
-						mapp[i+3][j-3],
-						mapp[i+4][j-3],
-						mapp[i+5][j-3],
-						mapp[i-5][j-2],
-						mapp[i-4][j-2],
-						mapp[i-3][j-2],
-						mapp[i-2][j-2],
-						mapp[i-1][j-2],
-						mapp[i][j-2],
-						mapp[i+1][j-2],
-						mapp[i+2][j-2],
-						mapp[i+3][j-2],
-						mapp[i+4][j-2],
-						mapp[i+5][j-2],
-						mapp[i-5][j-1],
-						mapp[i-4][j-1],
-						mapp[i-3][j-1],
-						mapp[i-2][j-1],
 						mapp[i-1][j-1],
 						mapp[i][j-1],
 						mapp[i+1][j-1],
-						mapp[i+2][j-1],
-						mapp[i+3][j-1],
-						mapp[i+4][j-1],
-						mapp[i+5][j-1],
-						mapp[i-5][j],
-						mapp[i-4][j],
-						mapp[i-3][j],
-						mapp[i-2][j],
 						mapp[i-1][j],
 						mapp[i][j],
 						mapp[i+1][j],
-						mapp[i+2][j],
-						mapp[i+3][j],
-						mapp[i+4][j],
-						mapp[i+5][j],
-						mapp[i-5][j+1],
-						mapp[i-4][j+1],
-						mapp[i-3][j+1],
-						mapp[i-2][j+1],
 						mapp[i-1][j+1],
 						mapp[i][j+1],
 						mapp[i+1][j+1],
-						mapp[i+2][j+1],
-						mapp[i+3][j+1],
-						mapp[i+4][j+1],
-						mapp[i+5][j+1],
-						mapp[i-5][j+2],
-						mapp[i-4][j+2],
-						mapp[i-3][j+2],
-						mapp[i-2][j+2],
-						mapp[i-1][j+2],
-						mapp[i][j+2],
-						mapp[i+1][j+2],
-						mapp[i+2][j+2],
-						mapp[i+3][j+2],
-						mapp[i+4][j+2],
-						mapp[i+5][j+2],
-						mapp[i-5][j+3],
-						mapp[i-4][j+3],
-						mapp[i-3][j+3],
-						mapp[i-2][j+3],
-						mapp[i-1][j+3],
-						mapp[i][j+3],
-						mapp[i+1][j+3],
-						mapp[i+2][j+3],
-						mapp[i+3][j+3],
-						mapp[i+4][j+3],
-						mapp[i+5][j+3],
-						mapp[i-5][j+4],
-						mapp[i-4][j+4],
-						mapp[i-3][j+4],
-						mapp[i-2][j+4],
-						mapp[i-1][j+4],
-						mapp[i][j+4],
-						mapp[i+1][j+4],
-						mapp[i+2][j+4],
-						mapp[i+3][j+4],
-						mapp[i+4][j+4],
-						mapp[i+5][j+4],
-						mapp[i-5][j+5],
-						mapp[i-4][j+5],
-						mapp[i-3][j+5],
-						mapp[i-2][j+5],
-						mapp[i-1][j+5],
-						mapp[i][j+5],
-						mapp[i+1][j+5],
-						mapp[i+2][j+5],
-						mapp[i+3][j+5],
-						mapp[i+4][j+5],
-						mapp[i+5][j+5]
 					]
 					if -1 in neighbors_value:
+						newImagePixels[i, j] = 0
+					else:
+						newImagePixels[i, j] = 255
+				except:
+					newImagePixels[i, j] = 255
+			elif mapp[i][j] == -1:
+				try:
+					neighbors_value = [
+						mapp[i-1][j-1],
+						mapp[i][j-1],
+						mapp[i+1][j-1],
+						mapp[i-1][j],
+						mapp[i][j],
+						mapp[i+1][j],
+						mapp[i-1][j+1],
+						mapp[i][j+1],
+						mapp[i+1][j+1],
+					]
+					if 1 in neighbors_value:
 						newImagePixels[i, j] = 0
 					else:
 						newImagePixels[i, j] = 255
@@ -607,129 +552,36 @@ def doDifferenceOfGaussian(src, threshold):
 			if mapp[i][j] == 1:
 				try:
 					neighbors_value = [
-						mapp[i-5][j-5],
-						mapp[i-4][j-5],
-						mapp[i-3][j-5],
-						mapp[i-2][j-5],
-						mapp[i-1][j-5],
-						mapp[i][j-5],
-						mapp[i+1][j-5],
-						mapp[i+2][j-5],
-						mapp[i+3][j-5],
-						mapp[i+4][j-5],
-						mapp[i+5][j-5],
-						mapp[i-5][j-4],
-						mapp[i-4][j-4],
-						mapp[i-3][j-4],
-						mapp[i-2][j-4],
-						mapp[i-1][j-4],
-						mapp[i][j-4],
-						mapp[i+1][j-4],
-						mapp[i+2][j-4],
-						mapp[i+3][j-4],
-						mapp[i+4][j-4],
-						mapp[i+5][j-4],
-						mapp[i-5][j-3],
-						mapp[i-4][j-3],
-						mapp[i-3][j-3],
-						mapp[i-2][j-3],
-						mapp[i-1][j-3],
-						mapp[i][j-3],
-						mapp[i+1][j-3],
-						mapp[i+2][j-3],
-						mapp[i+3][j-3],
-						mapp[i+4][j-3],
-						mapp[i+5][j-3],
-						mapp[i-5][j-2],
-						mapp[i-4][j-2],
-						mapp[i-3][j-2],
-						mapp[i-2][j-2],
-						mapp[i-1][j-2],
-						mapp[i][j-2],
-						mapp[i+1][j-2],
-						mapp[i+2][j-2],
-						mapp[i+3][j-2],
-						mapp[i+4][j-2],
-						mapp[i+5][j-2],
-						mapp[i-5][j-1],
-						mapp[i-4][j-1],
-						mapp[i-3][j-1],
-						mapp[i-2][j-1],
 						mapp[i-1][j-1],
 						mapp[i][j-1],
 						mapp[i+1][j-1],
-						mapp[i+2][j-1],
-						mapp[i+3][j-1],
-						mapp[i+4][j-1],
-						mapp[i+5][j-1],
-						mapp[i-5][j],
-						mapp[i-4][j],
-						mapp[i-3][j],
-						mapp[i-2][j],
 						mapp[i-1][j],
 						mapp[i][j],
 						mapp[i+1][j],
-						mapp[i+2][j],
-						mapp[i+3][j],
-						mapp[i+4][j],
-						mapp[i+5][j],
-						mapp[i-5][j+1],
-						mapp[i-4][j+1],
-						mapp[i-3][j+1],
-						mapp[i-2][j+1],
 						mapp[i-1][j+1],
 						mapp[i][j+1],
 						mapp[i+1][j+1],
-						mapp[i+2][j+1],
-						mapp[i+3][j+1],
-						mapp[i+4][j+1],
-						mapp[i+5][j+1],
-						mapp[i-5][j+2],
-						mapp[i-4][j+2],
-						mapp[i-3][j+2],
-						mapp[i-2][j+2],
-						mapp[i-1][j+2],
-						mapp[i][j+2],
-						mapp[i+1][j+2],
-						mapp[i+2][j+2],
-						mapp[i+3][j+2],
-						mapp[i+4][j+2],
-						mapp[i+5][j+2],
-						mapp[i-5][j+3],
-						mapp[i-4][j+3],
-						mapp[i-3][j+3],
-						mapp[i-2][j+3],
-						mapp[i-1][j+3],
-						mapp[i][j+3],
-						mapp[i+1][j+3],
-						mapp[i+2][j+3],
-						mapp[i+3][j+3],
-						mapp[i+4][j+3],
-						mapp[i+5][j+3],
-						mapp[i-5][j+4],
-						mapp[i-4][j+4],
-						mapp[i-3][j+4],
-						mapp[i-2][j+4],
-						mapp[i-1][j+4],
-						mapp[i][j+4],
-						mapp[i+1][j+4],
-						mapp[i+2][j+4],
-						mapp[i+3][j+4],
-						mapp[i+4][j+4],
-						mapp[i+5][j+4],
-						mapp[i-5][j+5],
-						mapp[i-4][j+5],
-						mapp[i-3][j+5],
-						mapp[i-2][j+5],
-						mapp[i-1][j+5],
-						mapp[i][j+5],
-						mapp[i+1][j+5],
-						mapp[i+2][j+5],
-						mapp[i+3][j+5],
-						mapp[i+4][j+5],
-						mapp[i+5][j+5]
 					]
 					if -1 in neighbors_value:
+						newImagePixels[i, j] = 0
+					else:
+						newImagePixels[i, j] = 255
+				except:
+					newImagePixels[i, j] = 255
+			elif mapp[i][j] == -1:
+				try:
+					neighbors_value = [
+						mapp[i-1][j-1],
+						mapp[i][j-1],
+						mapp[i+1][j-1],
+						mapp[i-1][j],
+						mapp[i][j],
+						mapp[i+1][j],
+						mapp[i-1][j+1],
+						mapp[i][j+1],
+						mapp[i+1][j+1],
+					]
+					if 1 in neighbors_value:
 						newImagePixels[i, j] = 0
 					else:
 						newImagePixels[i, j] = 255
